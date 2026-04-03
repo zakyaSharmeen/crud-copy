@@ -16,7 +16,13 @@ export default function TaskList() {
   // ✅ FETCH
   const fetchTasks = async () => {
     try {
-      const res = await axios.get<Task[]>("http://localhost:5000/tasks");
+      //    //            "https://crud-copy.onrender.com/tasks/agent",
+
+      // const res = await axios.get<Task[]>("http://localhost:5000/tasks");
+      const res = await axios.get<Task[]>(
+        "https://crud-copy.onrender.com/tasks",
+      );
+
       setTasks(res.data);
     } catch (err) {
       console.error(err);

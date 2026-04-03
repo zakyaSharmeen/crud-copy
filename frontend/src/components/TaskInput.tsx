@@ -10,7 +10,11 @@ export default function TaskInput() {
       alert("PLEASE ENTER A TASK");
       return;
     }
-    await axios.post("http://localhost:5000/tasks", { text });
+    //            "https://crud-copy.onrender.com/tasks/agent",
+
+    // await axios.post("http://localhost:5000/tasks", { text });
+    await axios.post("https://crud-copy.onrender.com/tasks", { text });
+
     window.location.reload();
   };
 

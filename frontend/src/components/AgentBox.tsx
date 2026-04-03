@@ -17,7 +17,9 @@ export default function AgentBox() {
     console.log("Button clicked"); // add this
 
     const res = await axios.post<AgentResponse>(
-      "http://localhost:5000/tasks/agent",
+      // "http://localhost:5000/tasks/agent",
+      "https://crud-copy.onrender.com/tasks/agent",
+
       {
         prompt: input,
       },
