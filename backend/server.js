@@ -27,7 +27,13 @@ dotenv.config();
 // console.log("SERVER KEY::::::::::::::", process.env.OPENAI_API_KEY);
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://crud-copy-1-frontend.onrender.com",
+    credentials: true, // if you need cookies
+  }),
+);
 app.use(express.json());
 
 mongoose
