@@ -16,12 +16,13 @@ process.env.OPENAI_AGENTS_DISABLE_TRACING = "true";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import taskRoutes from "../folders/routes/tasks.js";
+import taskRoutes from "./folders/routes/tasks.js";
 import mongoose from "mongoose";
 
 // import { runAgent } from "./agent/agent.js";
 
-dotenv.config({ path: "../.env", quiet: true });
+// dotenv.config({ path: "../.env", quiet: true });
+dotenv.config();
 
 // console.log("SERVER KEY::::::::::::::", process.env.OPENAI_API_KEY);
 
